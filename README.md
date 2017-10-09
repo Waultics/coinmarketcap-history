@@ -16,11 +16,13 @@ This script requires Python 2 to be available at /usr/bin/python.  This is the c
 ./coinmarketcap-usd-history.py <currency> <start_year> <end_year>
 ```
 
-Where:
+**Where:**
 
 * `<currency>` is the (case-insensitive) name of the currency / token as displayed on CoinMarketCap, with dashes in place of spaces
 * `<start_year>` is the beginning of the range to fetch data for
 * `<end_year>` is the end of the range to fetch data for
+
+The above information can also be found by running: `python coinmarketcap-usd-history.py -h` in your terminal.
 
 You can, of course, write results to a file with output redirection:
 
