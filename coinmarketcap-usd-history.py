@@ -9,24 +9,28 @@ CoinMarketCap USD Price History
 import sys
 import re
 import urllib2
+import argparse
 
-def parse_options():
+def parse_options(args):
   """
   Extract parameters from command line.
   """
 
-  args = sys.argv[1:]
+  arg_currency   = args.currency.lower()
+  arg_start_year = args.start_year
+  arg_end_year   = args.end_year
 
-  invalid_args = len(args) != 3
+  len_args = len(sys.argv[1:])
+  invalid_args = len_args != 3
 
-  if len(args) >= 1: currency = args[0].lower()
-  if len(args) >= 2: start_year = args[1]
-  if len(args) >= 3: end_year = args[2]
+  if len_args >= 1: currency   = arg_currency
+  if len_args >= 2: start_year = arg_start_year
+  if len_args >= 3: end_year   = arg_end_year
 
   # CoinMarketCap's price data (at least for Bitcoin, presuambly for all others) only goes back to 2013
   invalid_args = invalid_args or int(start_year) < 2013
-  invalid_args = invalid_args or int(end_year) < 2013
-  invalid_args = invalid_args or int(end_year) < int(start_year)
+  invalid_args = invalid_args or int(end_year)   < 2013
+  invalid_args = invalid_args or int(end_year)   < int(start_year)
 
   if invalid_args:
     print('Usage: ' + __file__ + ' <currency> <start_year> <end_year>');
@@ -108,20 +112,35 @@ def render_csv_data(header, rows):
 
   for row in rows:
     print(','.join(row))
-  
-  return
 
+def initialize_arg_parser():
+  # ----------- For user convenience. Shows required + optional parameters in the command line. ------------------------
+  parser = argparse.ArgumentParser()
+  parser.add_argument("currency", help="This is the name of the crypto, as is shown on coinmarketcap. For BTC, "
+                                       "for example, type: bitcoin.", type=str)
+  parser.add_argument("start_year", help="Start year from which you wish to retrieve historical data. Data will be "
+                                         "retrieved from start_year-01-01 by default.", type=str)
+  parser.add_argument("end_year", help="Last year (inclusive) for historical data retrieval. Data will be retrieved "
+                                       "for up to end_year-31-12 by default.", type=str)
+
+  args = parser.parse_args()
+
+  print "** Arguments passed **"
+  print "currency: %s"   % args.currency
+  print "start_year: %s" % args.start_year
+  print "end_year: %s"   % args.end_year
+
+  return args
+  # --------------------------------------------------------------------------------------------------------------------
 
 def main():
 
-  currency, start_year, end_year = parse_options()
+  args = initialize_arg_parser()
+  currency, start_year, end_year = parse_options(args)
   
   html = download_data(currency, start_year, end_year)
   header, rows = extract_data(html)
   render_csv_data(header, rows)
-  
-  return
-
 
 if __name__ == '__main__':
   main()
