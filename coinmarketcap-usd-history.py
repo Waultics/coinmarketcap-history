@@ -6,11 +6,9 @@ CoinMarketCap USD Price History
   Print the CoinMarketCap USD price history for a particular cryptocurrency in CSV format.
 """
 
-
 import sys
 import re
-import urllib
-
+import urllib2
 
 def parse_options():
   """
@@ -47,15 +45,21 @@ def download_data(currency, start_year, end_year):
   url = 'https://coinmarketcap.com/currencies/' + currency + '/historical-data/' + '?start=' + start_date + '&end=' + end_date
 
   try:
-    page = urllib.urlopen(url)
+    
+    page = urllib2.urlopen(url,timeout=10)
     if page.getcode() != 200:
       raise Exception('Failed to load page') 
     html = page.read()
     page.close()
 
-  except:
+  except Exception as e:
     print('Error fetching price data from ' + url)
     print('Did you use a valid CoinMarketCap currency?\nIt should be entered exactly as displayed on CoinMarketCap.com (case-insensitive), with dashes in place of spaces.')
+    
+    if hasattr(e, 'message'):
+	print("Error message: " + e.message)
+    else:
+	print(e)	
     sys.exit(1)
 
   return html
