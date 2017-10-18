@@ -33,5 +33,20 @@ You can, of course, write the results to a file with the output redirection:
 ```
 **Using in another python module:**
 
-You can also use the module in other python modules to get back a pandas dataframe with the history of the crypto coin. You may need to add the path to `coinmarketcap_usd_history.py` in your `sys.path` through a command like the following: `sys.path.append(<path_to_coinmarketcap_usd_history.py_parent_folder>)` (alternatively, just move the `coinmarketcap_usd_history.py` file to the directory of your module that is to use `coinmarketcap_usd_history.py`). Also, import the module: `import coinmarketcap_usd_history`.Then perform this to obtain the dataframe: `df = coinmarketcap_usd_history.main(['bitcoin','2017','2017','--toDf'])`. Note that if you just wish to see the output of the call in another python module, simply omit the `'--toDf'` part, which acts as a boolean flag (i.e. if it is present, then it gets converted to `True`, otherwise `False`).
-  
+You can also use `coinmarketcap.py` as a module in other python modules to get back a pandas dataframe with a cryptocurrency's history. 
+
+First, you may need to add the path to `coinmarketcap_usd_history.py` in your `sys.path` through a command like the following:  
+
+```sys.path.append(<path_to_coinmarketcap_usd_history.py_parent_folder>)```. 
+
+(Alternatively, just move the `coinmarketcap_usd_history.py` file to the directory of the including module.)
+
+Second, import the module: 
+
+```import coinmarketcap_usd_history```
+
+Finally perform this to obtain the dataframe:
+
+```df = coinmarketcap_usd_history.main(['bitcoin','2017-01-01','2017-12-31','--dataframe'])```.
+
+If you just wish to have the CSV output returned as a string to another python module, simply omit the `'--dataframe'` parameter.
