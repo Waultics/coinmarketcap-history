@@ -147,6 +147,13 @@ def processDataFrame(df):
   for col in cols: df.loc[:,col] = df[col].apply(lambda x: float(x))
   return df.sort_values(by='Date').reset_index(drop=True)
 
+def rowsFromFile(filename):
+    import csv
+    with open(filename, 'rb') as infile:
+        rows = csv.reader(infile, delimiter=',')
+        for row in rows:
+            print(row)
+
 # ----------------------------------------------------------------------------------------------------------------------
 
 def main(args=None):
