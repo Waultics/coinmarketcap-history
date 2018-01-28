@@ -11,7 +11,7 @@ Rather than getting the exchange rate at the exact moment of your trade, which i
 
 ## Installation
 
-This script requires Python 2 to be available at /usr/bin/python.  This is the case by default with macOS.
+Running this script as-is requires Python 2 to be available at /usr/bin/python.  This is the case by default with macOS.
 
 ## Usage
 
@@ -36,7 +36,7 @@ You can, of course, write the results to a file with the output redirection:
 
 #### Example
 ```shell
-python coinmarketcap_usd_history.py bitcoin 2017-01-01 2017-12-31 > testfile
+./coinmarketcap_usd_history.py bitcoin 2017-01-01 2017-12-31 > bitcoin_prices.csv
 ```
 
 ## Usage in another python module
