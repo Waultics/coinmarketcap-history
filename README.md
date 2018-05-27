@@ -1,3 +1,7 @@
+Maintainer needed!
+==================
+This project is no longer actively maintained. Let me know if you would like to take it over.
+
 CoinMarketCap history scraper
 =============================
 
