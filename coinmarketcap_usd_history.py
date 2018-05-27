@@ -102,8 +102,9 @@ def extract_data(html):
   """
 
   head = re.search(r'<thead>(.*)</thead>', html, re.DOTALL).group(1)
-  header = re.findall(r'<th .*>([\w ]+)</th>', head)
+  header = re.findall(r'<th .*>([\w /*]+)</th>', head)
   header.append('Average (High + Low / 2)')
+  header = [s.replace('*', '') for s in header]
 
   body = re.search(r'<tbody>(.*)</tbody>', html, re.DOTALL).group(1)
   raw_rows = re.findall(r'<tr[^>]*>' + r'\s*<td[^>]*>([^<]+)</td>'*7 + r'\s*</tr>', body)
