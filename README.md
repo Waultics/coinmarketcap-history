@@ -1,9 +1,5 @@
-Maintainer needed!
-==================
-This project is no longer actively maintained. Let me know if you would like to take it over.
 
-CoinMarketCap history scraper
-=============================
+# CoinMarketCap history scraper
 
 Print the [CoinMarketCap](http://www.coinmarketcap.com) [USD price history](https://coinmarketcap.com/currencies/bitcoin/historical-data/) for a particular cryptocurrency in CSV format.
 
@@ -17,18 +13,24 @@ Rather than getting the exchange rate at the exact moment of your trade, which i
 
 Running this script as-is requires Python 2 to be available at /usr/bin/python.  This is the case by default with macOS.
 
+Download the zip file or navigate to the desired install directory and run:
+
+```shell
+$ git clone https://github.com/Alescontrela/coinmarketcap-history.git
+```
+
 ## Usage
 
-Just run in the terminal:
+In the terminal, navigate into the repo directory and run:
 ```shell
-./coinmarketcap_usd_history.py <currency> <start_date> <end_date>
+$ ./coinmarketcap_usd_history.py <currency> <start_date> <end_date>
 ```
    
 where
 
 * `currency` is the (case-insensitive) name of the currency / token as displayed on CoinMarketCap, with dashes in place of spaces
-* `start_date` is the beginning of the range to fetch data for. For example, 2017-10-01 (for 2017 October 10th)
-* `end_year` is the end of the range to fetch data for. You may use the date in the future here to obtain the latest data. Format is the same as in the start date.
+* `start_date` is the beginning of the range to fetch data for in `yyyy-mm-dd` format. For example, 2017-10-01 (for 2017 October 10th)
+* `end_year` is the end of the range to fetch data for in `yyyy-mm-dd` format. You may use a date in the future to obtain the latest data. Format is the same as in the start date.
 
 The above information can also be found by running: `python coinmarketcap_usd_history.py -h` in your terminal.
 
