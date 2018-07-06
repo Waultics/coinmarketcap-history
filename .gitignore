@@ -3,3 +3,5 @@ __pycache__/
 /cmc.egg-info/
 build
 /.ipynb_checkpoints/
+bin
+dist
