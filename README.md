@@ -1,4 +1,4 @@
-#  CoinMarketCap Historical Data Retrieval ![icon](https://github.com/Alescontrela/coinmarketcap-history/blob/master/resources/images/coins.png)
+#  CoinMarketCap Historical Data Retrieval
 
 Obtain [USD price history](https://coinmarketcap.com/currencies/bitcoin/historical-data/) data for [CoinMarketCap](http://www.coinmarketcap.com)-listed cryptocurrencies.
 
