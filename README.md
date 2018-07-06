@@ -43,7 +43,7 @@ $ pip install cmc
 ### Command Line
 The command line tool is useful for US tax reporting, among other things.  If you wish to report the cost basis for a trade (or for coins acquired through mining), the IRS requires you to denominate that cost basis in USD.  In the case of token-for-token trades (e.g. purchasing ETH with BTC), that requires you know the USD:BTC exchange rate at the time of the trade.
 
-Rather than getting the exchange rate at the exact moment of your trade, which is generally not feasible, the IRS standard (at least for similar situations w/stock) is to use the average of a stock's high and low price for the day. CoinMarketCap doesn't provide this figure, but this tool does.
+Rather than getting the exchange rate at the exact moment of your trade, which is generally not feasible, the IRS standard is to use the average of a stock's high and low price for the day. CoinMarketCap doesn't provide this figure, but this tool does.
 
 #### Command Line Usage
 
