@@ -1,5 +1,4 @@
 # CoinMarketCap Historical Data Retrieval
-***
 
 Obtain [USD price history](https://coinmarketcap.com/currencies/bitcoin/historical-data/) data for [CoinMarketCap](http://www.coinmarketcap.com)-listed cryptocurrencies.
 
@@ -13,7 +12,7 @@ Use this library as a **command-line script** to obtain historical cryptocurrenc
     * [Examples](#command-line-examples)
   * [Module](#module)
     * [Usage](#library)
-    * [Examples](#library-usage)
+    * [Examples](#library-examples)
 * [Legacy](#legacy)
 * [Updates](#updates)
 ***
