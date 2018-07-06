@@ -57,12 +57,6 @@ where:
 * `start_date` is the beginning of the range to fetch data for in `yyyy-mm-dd` format (i.e. 2017-10-01 for 2017 October 10th).
 * `end_year` is the end of the range to fetch data for in `yyyy-mm-dd` format.
 
-Data for multiple cryptocurrencies can be obtained with:
-```shell
-$ coinmarketcap <currency_1,currency_2,...,currency_n> <start_date> <end_date>
-```
-**Note:** currencies must be comma-separated, with no spaces in between.
-
 Data is returned in the following tabular format:
 
 
@@ -71,6 +65,19 @@ Data is returned in the following tabular format:
 | Date     | Open     | High     |   Low    | Close    | Volume   |Market Cap| Average  |
 |...       |...       |...       |...       |...       |...       |...       |...       |
 
+Data for multiple cryptocurrencies can be obtained with:
+```shell
+$ coinmarketcap <currency_1,currency_2,...,currency_n> <start_date> <end_date>
+```
+**Note:** currencies must be comma-separated, with no spaces in between.
+
+Data for multiple cryptocurrencies is returned in the following tabular format:
+
+
+|          |Bitcoin   |          |          |          |          |          |          |Ripple    |          |          |          |          |          |          |
+|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
+| Date     | Open     | High     |   Low    | Close    | Volume   |Market Cap| Average  | Open     | High     |   Low    | Close    | Volume   |Market Cap| Average  |
+|...       |...       |...       |...       |...       |...       |...       |...       |...       |...       |...       |...       |...       |...       |...       |
 
 The above information can also be found by running:
 ```shell
