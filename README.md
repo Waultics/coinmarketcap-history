@@ -142,7 +142,7 @@ from cmc import coinmarketcap
 Data for cryptocurrencies can be gathered using the `getDataFor()` method:
 
 #### `getDataFor()`
-**params:**
+* **params:**
   * `cryptocurrencies`: string or list
       * crypto(s) to be scraped. supply a string for a single cryptocurrency, or supply a list of strings for multiple cryptocurrencies.
   * `start_date`: datetime object
@@ -158,7 +158,7 @@ Data for cryptocurrencies can be gathered using the `getDataFor()` method:
 
   * `DOWNLOAD_DIR` **(optional)**: string
       * String of the relative path to save data to and load data from. If `DOWNLOAD_DIR` is not specified, no data is saved.
-**returns:**
+* **returns:**
   * `out`: [Pandas DataFrame](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)
       * A DataFrame containing historical price information for the specified cryptocurrencies through the desired daterange.
 
