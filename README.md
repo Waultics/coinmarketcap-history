@@ -100,6 +100,8 @@ Running `coinmarketcap` asynchronously greatly reduces the amount of time requir
 
 <img src = "https://github.com/Alescontrela/coinmarketcap-history/blob/master/resources/images/async_vs_sequential.jpeg" width = "100%" padding = "0">
 
+**Note:** Asynchronous runtimes may vary according to CPU architecture. Benchmark performed with a 64-bit 6-core AMD processor. 
+
 #### Command Line Examples
 Collecting data for one cryptocurrency:
 ```shell
