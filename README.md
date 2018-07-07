@@ -11,7 +11,7 @@ Use this library as a **command-line script** to obtain historical cryptocurrenc
     * [Usage](#command-line-usage)
     * [Examples](#command-line-examples)
   * [Module](#module)
-    * [Usage](#library)
+    * [Usage](#module)
     * [Examples](#library-examples)
 * [Legacy](#legacy)
 * [Updates](#updates)
@@ -127,8 +127,6 @@ $ python coinmarketcap.py bitcoin,ripple,ethereum 2017-01-01 2017-12-31 > bitcoi
 
 In addition to command-line functionality, coinmarketcap-history provides the `cmc` library, which allows users to obtain CoinMarketCap data from within a Python program. Historical is returned in the form of a [Pandas DataFrame](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html), which allows for easy use.
 
-#### Library
-
 To get started with the `cmc` library, import it from within your program:
 
 ```python
@@ -137,8 +135,8 @@ from cmc import coinmarketcap
 
 Data for cryptocurrencies can be gathered using the `getDataFor()` method:
 
-**getDataFor()**
-params:
+#### `getDataFor()`
+**params:**
   * `cryptocurrencies`: string or list
       * crypto(s) to be scraped. supply a string for a single cryptocurrency, or supply a list of strings for multiple cryptocurrencies.
   * `start_date`: datetime object
@@ -154,7 +152,7 @@ params:
 
   * `DOWNLOAD_DIR` **(optional)**: string
       * String of the relative path to save data to and load data from. If `DOWNLOAD_DIR` is not specified, no data is saved.
-returns:
+**returns:**
   * `out`: [Pandas DataFrame](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)
       * A DataFrame containing historical price information for the specified cryptocurrencies through the desired daterange.
 
