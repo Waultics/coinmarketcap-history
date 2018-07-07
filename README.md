@@ -96,6 +96,10 @@ For faster retrieval, cryptocurrency data can be gathered asynchronously by supp
 $ coinmarketcap <currency> <start_date> <end_date> --async
 ```
 
+Running `coinmarketcap` asynchronously greatly reduces the amount of time required to obtain data for cryptocurrencies, especially when gathering data for multiple cryptocurrencies at a time:
+
+<img src = "https://github.com/Alescontrela/coinmarketcap-history/blob/master/resources/images/async_vs_sequential.jpeg" width = "100%">
+
 #### Command Line Examples
 Collecting data for one cryptocurrency:
 ```shell
