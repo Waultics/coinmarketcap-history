@@ -1,5 +1,2 @@
-asyncio
-aiohttp
-aiodns
-pandas
-tqdm
+# This prevents us from maintaining a duplicate list of packages here and in setup.py.
+.

@@ -1,5 +1,15 @@
 import setuptools
 
+requires = [
+    # asyncio was added to the stdlib in Python v3.4
+    'asyncio; python_version < "3.4"',
+    'aiohttp',
+    'aiodns',
+    'pandas',
+    'tqdm',
+    'requests',
+]
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
@@ -13,6 +23,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/Alescontrela/coinmarketcap-history",
     packages=setuptools.find_packages(),
+    install_requires=requires,
     entry_points={
         "console_scripts": [
             "coinmarketcap=cmc.coinmarketcap:main",
