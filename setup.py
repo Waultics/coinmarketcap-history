@@ -13,7 +13,11 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/Alescontrela/coinmarketcap-history",
     packages=setuptools.find_packages(),
-    scripts=['bin/coinmarketcap'],
+    entry_points={
+        "console_scripts": [
+            "coinmarketcap=cmc.coinmarketcap:main",
+        ],
+    },
     classifiers=(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
