@@ -90,17 +90,17 @@ Write outputs to a file by running:
 $ coinmarketcap <currency> <start_date> <end_date> > <output_filename>
 ```
 
-For faster retrieval, cryptocurrency data can be gathered asynchronously by supplying the `--async` flag:
+For faster retrieval, cryptocurrency data can be gathered asynchronously by supplying the `--asynchro` flag:
 
 ```shell
-$ coinmarketcap <currency> <start_date> <end_date> --async
+$ coinmarketcap <currency> <start_date> <end_date> --asynchro
 ```
 
 Running `coinmarketcap` asynchronously greatly reduces the amount of time required to obtain data for cryptocurrencies, especially when gathering data for multiple cryptocurrencies at a time:
 
 <img src = "https://github.com/Alescontrela/coinmarketcap-history/blob/master/resources/images/async_vs_sequential.jpeg" width = "100%" padding = "0">
 
-**Note:** Asynchronous runtimes may vary according to CPU architecture. Benchmark performed with a 64-bit 6-core AMD processor. 
+**Note:** Asynchronous runtimes may vary according to CPU architecture. Benchmark performed with a 64-bit 6-core AMD processor.
 
 #### Command Line Examples
 Collecting data for one cryptocurrency:
@@ -115,7 +115,7 @@ $ coinmarketcap bitcoin,ripple,ethereum 2017-01-01 2017-12-31
 
 Collecting data for multiple cryptocurrencies asynchronously(faster):
 ```shell
-$ coinmarketcap bitcoin,ripple,ethereum 2017-01-01 2017-12-31 --async
+$ coinmarketcap bitcoin,ripple,ethereum 2017-01-01 2017-12-31 --asynchro
 ```
 
 Writing output to a file:

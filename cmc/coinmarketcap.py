@@ -80,7 +80,7 @@ parser.add_argument("start_date",help="Start date for which you wish to retrieve
 parser.add_argument("end_date",    help="End date for the historical data retrieval. If you wish to retrieve all the "
                                         "data then you can give a date in the future. Same format as in start_date "
                                         "'yyyy-mm-dd'.", type=str)
-parser.add_argument("--asyncro", help="If present, scrapes cryptocurrencies asynchronously (faster).", default = False,action='store_true')
+parser.add_argument("--asynchro", help="If present, scrapes cryptocurrencies asynchronously (faster).", default = False,action='store_true')
 
 
 #------------------------------------------------- Command Line Methods -------------------------------------------------------
@@ -94,7 +94,7 @@ def main(args=None):
     else:
         args = parser.parse_args()
 
-    cryptocurrencies, start_date, end_date, asynchro = args.currency, args.start_date, args.end_date, args.asyncro
+    cryptocurrencies, start_date, end_date, asynchro = args.currency, args.start_date, args.end_date, args.asynchro
 
     cryptocurrencies = cryptocurrencies.split(',')
 
