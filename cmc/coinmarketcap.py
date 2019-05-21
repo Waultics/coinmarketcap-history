@@ -11,7 +11,7 @@ import os
 
 #----------------------------------------------------- Endpoints -----------------------------------------------------------
 
-def getDataFor(cryptocurrencies, start_date, end_date, fields = [], async = False, DOWNLOAD_DIR = None):
+def getDataFor(cryptocurrencies, start_date, end_date, fields = [], asynchro = False, DOWNLOAD_DIR = None):
     if DOWNLOAD_DIR is not None:
         save =True
         if not os.path.exists(DOWNLOAD_DIR): os.makedirs(DOWNLOAD_DIR)
@@ -43,9 +43,9 @@ def getDataFor(cryptocurrencies, start_date, end_date, fields = [], async = Fals
     else:
         cryptocurrencies = all_cryptocurrencies
 
-    if async:
+    if asynchro:
         # extract html asynchronously
-        from cmc.async import async_utils
+        from cmc.asynchro import async_utils
         result_dict = async_utils.get_htmls(cryptocurrencies, start_date, end_date)
     else:
         # otherwise, extract data sequentially
@@ -80,7 +80,7 @@ parser.add_argument("start_date",help="Start date for which you wish to retrieve
 parser.add_argument("end_date",    help="End date for the historical data retrieval. If you wish to retrieve all the "
                                         "data then you can give a date in the future. Same format as in start_date "
                                         "'yyyy-mm-dd'.", type=str)
-parser.add_argument("--async", help="If present, scrapes cryptocurrencies asynchronously (faster).", default = False,action='store_true')
+parser.add_argument("--asyncro", help="If present, scrapes cryptocurrencies asynchronously (faster).", default = False,action='store_true')
 
 
 #------------------------------------------------- Command Line Methods -------------------------------------------------------
@@ -94,11 +94,11 @@ def main(args=None):
     else:
         args = parser.parse_args()
 
-    cryptocurrencies, start_date, end_date, async = args.currency, args.start_date, args.end_date, args.async
+    cryptocurrencies, start_date, end_date, asynchro = args.currency, args.start_date, args.end_date, args.asyncro
 
     cryptocurrencies = cryptocurrencies.split(',')
 
-    df = getDataFor(cryptocurrencies, start_date, end_date, async = async)
+    df = getDataFor(cryptocurrencies, start_date, end_date, asynchro = asynchro)
 
     print(df.to_string())
 
