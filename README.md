@@ -18,19 +18,8 @@ Use this library as a **command-line script** to obtain historical cryptocurrenc
 ***
 
 ## Installation
-Dependencies:
-* asyncio
-* aiohttp
-* aiodns
-* pandas
-* tqdm
 
-First install the required dependencies:
-```shell
-$ pip install asyncio aiohttp aiodns pandas tqdm
-```
-
-Then install coinmarketcap-history with pip:
+Install coinmarketcap-history with pip:
 
 ```shell
 $ pip install cmc
