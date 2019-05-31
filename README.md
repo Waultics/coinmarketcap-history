@@ -224,3 +224,5 @@ Legacy code can be obtained from the `coinmarketcap-history-legacy` repository f
 
 ### 2.0.0 - July 6th, 2018
 * as of version 2, coinmarketcap-history now offers support for Python 3. Additionally, the `cmc` artifact allows for global use of the `coinmarketcap` command line tool, as well as dedicated support for in-program operations.
+### 2.0.2 - May 30th, 2019
+* as of version 2.0.2, coinmarketcap-history can now be run asynchronously inside jupyter notebooks thanks to [changes in the way they handle event loops](https://blog.jupyter.org/ipython-7-0-async-repl-a35ce050f7f7).
