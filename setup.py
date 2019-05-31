@@ -15,9 +15,9 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="cmc",
-    version="2.0.2",
-    author="Alejandro Escontrela,Felipe Faria",
-    author_email="alejandroescontrela@gmail.com, felipefaria@me.com",
+    version="2.0.3",
+    author="Alejandro Escontrela <alejandroescontrela@gmail.com>,Felipe Faria <felipefaria@me.com>",
+    author_email="alejandroescontrela@gmail.com",
     description="Get the price history for CoinMarketCap-listed currencies",
     long_description=long_description,
     long_description_content_type="text/markdown",
