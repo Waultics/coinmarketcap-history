@@ -1,5 +1,6 @@
 __pycache__/
 .DS_Store
+/.eggs/
 /cmc.egg-info/
 build
 /.ipynb_checkpoints/
