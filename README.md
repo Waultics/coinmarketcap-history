@@ -1,4 +1,6 @@
 #  CoinMarketCap Historical Data Retrieval <img src = "https://github.com/Alescontrela/coinmarketcap-history/blob/master/resources/images/coins.png" width = "85px" padding="0">
+[![Build Status](https://travis-ci.org/Waultics/coinmarketcap-history.svg?branch=master)](https://travis-ci.org/Waultics/coinmarketcap-history)[![Coverage Status](https://coveralls.io/repos/github/Waultics/coinmarketcap-history/badge.svg?branch=master)](https://coveralls.io/github/Waultics/coinmarketcap-history?branch=master)
+
 
 Obtain [USD price history](https://coinmarketcap.com/currencies/bitcoin/historical-data/) data for [CoinMarketCap](http://www.coinmarketcap.com)-listed cryptocurrencies.
 

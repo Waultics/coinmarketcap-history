@@ -6,12 +6,10 @@ python:
   - "3.6"
   - "3.7"
 # command to install dependencies
-before-install:
-  - pip install cython
+install:
   - pip install --upgrade pytest
   - pip install --upgrade pytest-cov
   - pip install coveralls
-install:
   - pip install cmc
 script:
   - pytest --cov=coinmarketcap-history/
