@@ -12,6 +12,6 @@ install:
   - pip install coveralls
   - pip install cmc
 script:
-  - pytest --cov=coinmarketcap-history/
+  - pytest --cov=cms/
 after_success:
   - coveralls
