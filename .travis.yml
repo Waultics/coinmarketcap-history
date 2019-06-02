@@ -15,11 +15,12 @@ python:
 # command to install dependencies
 before-install:
   - pip install cython
+  - pip install pytest
   - pip install pytest-cov
   - pip install coveralls
 install:
   - pip install cmc
 script:
-  - py.test --cov=coinmarketcap-history/
+  - pytest --cov=coinmarketcap-history/
 after_success:
   - coveralls
