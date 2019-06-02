@@ -21,6 +21,6 @@ before-install:
 install:
   - pip install cmc
 script:
-  - pytest --cov=coinmarketcap-history/
+  - py.test --cov=coinmarketcap-history/
 after_success:
   - coveralls
