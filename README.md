@@ -1,3 +1,8 @@
+## REPO HAS BEEN DEPRACATED 
+
+**CoinMarketCap has updated their website and officially released their own [API](https://coinmarketcap.com/api). As of today this repo no longer works due to changes in their UI. We apologize for the inconvenience, and hope other alternatives find their way out in the open source community.**
+
+---
 #  CoinMarketCap Historical Data Retrieval <img src = "https://github.com/Alescontrela/coinmarketcap-history/blob/master/resources/images/coins.png" width = "85px" padding="0">
 [![Build Status](https://travis-ci.org/Waultics/coinmarketcap-history.svg?branch=master)](https://travis-ci.org/Waultics/coinmarketcap-history)[![Coverage Status](https://coveralls.io/repos/github/Waultics/coinmarketcap-history/badge.svg?branch=master)](https://coveralls.io/github/Waultics/coinmarketcap-history?branch=master)
 
